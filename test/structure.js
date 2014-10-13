@@ -1,8 +1,13 @@
 var gulp = require('gulp'),
   chai = require('chai'),
+  expect = chai.expect,
+  runSequence = require('run-sequence'),
+  execSync = require('exec-sync'),
   styleguide = require('../lib/styleguide.js'),
   fs = require('fs'),
   through = require('through2'),
+  angular = require('angular'),
+  // mock = require('angular-mocks'),
   data = {
     source: {
       css: ['./demo/source/**/*.scss'],
